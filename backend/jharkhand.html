@@ -154,7 +154,7 @@
             text-align: center;
             color: white;
             padding: 0 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1588979285244-36d3a8a0d5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593699293861-8d958d0d1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -454,11 +454,29 @@
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.6s ease;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .planner-form.visible {
             transform: translateY(0);
             opacity: 1;
+        }
+        
+        .planner-image {
+            flex: 1;
+            min-width: 300px;
+            background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            min-height: 400px;
+        }
+        
+        .planner-content {
+            flex: 1;
+            min-width: 300px;
         }
         
         .form-row {
@@ -813,7 +831,7 @@
         
         /* Eco-Stays Section */
         .eco-stays {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593699293861-8d958d0d1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -962,6 +980,21 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
+        }
+        
+        .calendar-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516214104703-d870798faf8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         .calendar-grid {
@@ -1053,6 +1086,22 @@
             justify-content: center;
             flex-shrink: 0;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .festival-date::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516214104703-d870798faf8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         .festival-card:hover .festival-date {
@@ -1066,6 +1115,10 @@
         
         .festival-date .month {
             font-size: 14px;
+        }
+        
+        .festival-info {
+            flex: 1;
         }
         
         .festival-info h3 {
@@ -1100,6 +1153,15 @@
         .festival-card:hover .festival-tag {
             background: var(--primary);
             color: white;
+        }
+        
+        .festival-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
         }
         
         /* AR Experience Section */
@@ -1379,6 +1441,33 @@
             justify-content: center;
             flex-shrink: 0;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-feature-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .ai-feature:nth-child(1) .ai-feature-icon::before {
+            background-image: url('https://images.unsplash.com/photo-1534067483953-9362bd8123b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .ai-feature:nth-child(2) .ai-feature-icon::before {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723a9ce6890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .ai-feature:nth-child(3) .ai-feature-icon::before {
+            background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
         }
         
         .ai-feature:hover .ai-feature-icon {
@@ -1435,6 +1524,37 @@
             transition: all 0.3s ease;
             transform: translateY(20px);
             opacity: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: -1;
+        }
+        
+        .dashboard-card:nth-child(1)::before {
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .dashboard-card:nth-child(2)::before {
+            background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .dashboard-card:nth-child(3)::before {
+            background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .dashboard-card:nth-child(4)::before {
+            background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
         }
         
         .dashboard-card.visible {
@@ -1483,6 +1603,21 @@
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.8s ease;
+            overflow: hidden;
+        }
+        
+        .dashboard-chart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
         }
         
         .dashboard-chart.visible {
@@ -1513,6 +1648,40 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            position: relative;
+        }
+        
+        .footer-column::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .footer-column:nth-child(1)::before {
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .footer-column:nth-child(2)::before {
+            background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .footer-column:nth-child(3)::before {
+            background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .footer-column:nth-child(4)::before {
+            background-image: url('https://images.unsplash.com/photo-1537884944087-1d22cdb2bdd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
         }
         
         .footer-column h3 {
@@ -1643,6 +1812,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+        }
+        
+        .chatbot-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1588979285244-36d3a8a0d5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         .chatbot-header h3 {
@@ -1812,6 +1996,14 @@
             .ar-features {
                 grid-template-columns: 1fr;
             }
+            
+            .planner-form {
+                flex-direction: column;
+            }
+            
+            .planner-image {
+                min-height: 250px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1874,7 +2066,6 @@
             <div class="loader-text">EXPLORE JHARKHAND</div>
         </div>
     </div>
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -1894,7 +2085,6 @@
             </div>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -1909,7 +2099,6 @@
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
-
     <!-- Interactive Map Section -->
     <section id="destinations" class="map-section">
         <div class="container">
@@ -1937,7 +2126,6 @@
             </div>
         </div>
     </section>
-
     <!-- Trip Planner Section -->
     <section class="trip-planner">
         <div class="container">
@@ -1947,64 +2135,66 @@
             </div>
             
             <div class="planner-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <select id="destination">
-                            <option value="">Select a destination</option>
-                            <option value="ranchi">Ranchi</option>
-                            <option value="netarhat">Netarhat</option>
-                            <option value="hundru">Hundru Falls</option>
-                            <option value="parasnath">Parasnath Hill</option>
-                            <option value="betla">Betla National Park</option>
-                        </select>
+                <div class="planner-image"></div>
+                <div class="planner-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination">
+                                <option value="">Select a destination</option>
+                                <option value="ranchi">Ranchi</option>
+                                <option value="netarhat">Netarhat</option>
+                                <option value="hundru">Hundru Falls</option>
+                                <option value="parasnath">Parasnath Hill</option>
+                                <option value="betla">Betla National Park</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date</label>
+                            <input type="date" id="checkin">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="checkin">Check-in Date</label>
-                        <input type="date" id="checkin">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date</label>
+                            <input type="date" id="checkout">
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <select id="travelers">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5+">5+ People</option>
+                            </select>
+                        </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="interests">Interests</label>
+                            <select id="interests">
+                                <option value="nature">Nature & Wildlife</option>
+                                <option value="adventure">Adventure & Trekking</option>
+                                <option value="culture">Tribal Culture</option>
+                                <option value="spiritual">Spiritual & Religious</option>
+                                <option value="photography">Photography</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget">
+                                <option value="budget">Budget (Under ₹2000/day)</option>
+                                <option value="mid">Mid-range (₹2000-5000/day)</option>
+                                <option value="luxury">Luxury (Above ₹5000/day)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn" style="width: 100%;">Plan My Trip</button>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="checkout">Check-out Date</label>
-                        <input type="date" id="checkout">
-                    </div>
-                    <div class="form-group">
-                        <label for="travelers">Number of Travelers</label>
-                        <select id="travelers">
-                            <option value="1">1 Person</option>
-                            <option value="2">2 People</option>
-                            <option value="3">3 People</option>
-                            <option value="4">4 People</option>
-                            <option value="5+">5+ People</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="interests">Interests</label>
-                        <select id="interests">
-                            <option value="nature">Nature & Wildlife</option>
-                            <option value="adventure">Adventure & Trekking</option>
-                            <option value="culture">Tribal Culture</option>
-                            <option value="spiritual">Spiritual & Religious</option>
-                            <option value="photography">Photography</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget Range</label>
-                        <select id="budget">
-                            <option value="budget">Budget (Under ₹2000/day)</option>
-                            <option value="mid">Mid-range (₹2000-5000/day)</option>
-                            <option value="luxury">Luxury (Above ₹5000/day)</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="btn" style="width: 100%;">Plan My Trip</button>
             </div>
         </div>
     </section>
-
     <!-- Booking System Section -->
     <section class="booking-section">
         <div class="container">
@@ -2173,7 +2363,6 @@
             </div>
         </div>
     </section>
-
     <!-- Emergency Section -->
     <section class="emergency-section">
         <div class="container">
@@ -2212,7 +2401,6 @@
             </div>
         </div>
     </section>
-
     <!-- Local Marketplace Section -->
     <section id="marketplace" class="marketplace-section">
         <div class="container">
@@ -2273,7 +2461,6 @@
             </div>
         </div>
     </section>
-
     <!-- Eco-Stays Section -->
     <section id="ecostays" class="eco-stays">
         <div class="container">
@@ -2334,7 +2521,6 @@
             </div>
         </div>
     </section>
-
     <!-- Festival Calendar Section -->
     <section id="festivals" class="festival-calendar">
         <div class="container">
@@ -2467,6 +2653,7 @@
                         <div class="day">14</div>
                         <div class="month">Nov</div>
                     </div>
+                    <div class="festival-image" style="background-image: url('https://images.unsplash.com/photo-1516214104703-d870798faf8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
                     <div class="festival-info">
                         <h3>Karma Festival</h3>
                         <p>A vibrant tribal festival where people dance around the Karma tree, celebrating nature and community bonds.</p>
@@ -2484,6 +2671,7 @@
                         <div class="day">15</div>
                         <div class="month">Dec</div>
                     </div>
+                    <div class="festival-image" style="background-image: url('https://images.unsplash.com/photo-1540330782592-4a4d466711e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
                     <div class="festival-info">
                         <h3>Tusu Parab</h3>
                         <p>Winter festival celebrated with folk songs, fairs, and traditional Tusu idols made by tribal communities.</p>
@@ -2501,6 +2689,7 @@
                         <div class="day">20</div>
                         <div class="month">Jan</div>
                     </div>
+                    <div class="festival-image" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
                     <div class="festival-info">
                         <h3>Makar Sankranti</h3>
                         <p>Harvest festival celebrated with great fervor, featuring kite flying, traditional fairs, and special dishes.</p>
@@ -2515,7 +2704,6 @@
             </div>
         </div>
     </section>
-
     <!-- AR Experience Section -->
     <section class="ar-experience">
         <div class="container">
@@ -2567,7 +2755,6 @@
             </div>
         </div>
     </section>
-
     <!-- AI Itinerary Section -->
     <section class="ai-itinerary">
         <div class="container">
@@ -2631,7 +2818,6 @@
             </div>
         </div>
     </section>
-
     <!-- Analytics Dashboard Section -->
     <section class="analytics-dashboard">
         <div class="container">
@@ -2668,7 +2854,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -2718,7 +2903,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Chatbot -->
     <div class="chatbot">
         <div class="chatbot-toggle" id="chatbot-toggle">
@@ -2746,7 +2930,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // Loading Animation
         window.addEventListener('load', function() {
@@ -2862,21 +3045,64 @@
             
             // Chatbot responses
             const chatbotResponses = {
-                "hello": "Hello! Welcome to Jharkhand Tourism. How can I assist you today?",
-                "hi": "Hi there! I'm here to help you plan your perfect trip to Jharkhand.",
-                "waterfalls": "Jharkhand is famous for its stunning waterfalls! Top recommendations include Hundru Falls, Dassam Falls, and Jonha Falls. The best time to visit is during the monsoon season when they're at their most spectacular.",
-                "temples": "Jharkhand has many beautiful temples. Don't miss the Baidyanath Dham in Deoghar, Sun Temple in Ranchi, and Jagannath Temple in Ranchi.",
-                "tribal": "Jharkhand is home to 32 tribal communities! You can experience their rich culture through festivals like Sarhul, Karma, and Tusu. Consider staying in our eco-stays for an authentic tribal experience.",
-                "eco-stay": "Our eco-stays offer sustainable accommodations like mud houses, bamboo cottages, and treehouses. They're perfect for experiencing local culture while minimizing environmental impact.",
-                "booking": "You can book hotels, eco-stays, homestays, and local transport through our website. Just navigate to the 'Book Your Stay & Transport' section!",
-                "weather": "The best time to visit Jharkhand is from October to March when the weather is pleasant. Monsoon (July-September) is great for waterfalls, while winter (November-February) is perfect for festivals.",
-                "transport": "We offer various transport options including local taxis, bike rentals, and guided bus tours. All can be booked through our website.",
-                "safety": "Your safety is our priority! We provide emergency contacts, weather alerts, and safe route navigation. In case of emergency, use the SOS button on our website.",
-                "festival": "Jharkhand celebrates many tribal festivals! Karma Festival (November), Tusu Parab (December), and Sarhul (Spring) are must-experience cultural events.",
-                "food": "Don't miss Jharkhand's traditional dishes like Dhuska, Litti Chokha, and Thekua. Our eco-stays often serve authentic local cuisine.",
-                "default": "I'm here to help with information about Jharkhand tourism! You can ask me about waterfalls, temples, tribal culture, eco-stays, booking, weather, transport, safety, festivals, or food."
-            };
-            
+                
+
+              
+    // Greetings
+              "hello": "Hello! Welcome to Jharkhand Tourism. How can I assist you today?",
+           "hi": "Hi there! I'm here to help you plan your perfect trip to Jharkhand.",
+    "namaste": "Namaste! Jharkhand Tourism welcomes you.",
+
+    // Waterfalls
+    "hundru falls": "Hundru Falls near Ranchi is one of the highest and most popular waterfalls in Jharkhand.",
+    "dassam falls": "Dassam Falls is a scenic waterfall 40 km from Ranchi, best during monsoon.",
+    "jonha falls": "Jonha Falls, also called Gautamdhara, is a beautiful picnic spot near Ranchi.",
+    "lodh falls": "Lodh Falls is the highest waterfall in Jharkhand, located in Latehar district.",
+    "hirni falls": "Hirni Falls is surrounded by dense forests, a perfect eco-tourism spot.",
+    "panchghagh falls": "Panchghagh Falls in Khunti is famous for its five streams merging together.",
+
+    // Temples
+    "baidyanath temple": "Baidyanath Dham in Deoghar is one of the 12 Jyotirlingas, a must-visit for devotees.",
+    "sun temple ranchi": "The Sun Temple near Ranchi is shaped like a giant chariot with 18 wheels.",
+    "parasnath temple": "Parasnath Hill in Giridih is the most sacred Jain pilgrimage site.",
+    "jagannath temple ranchi": "Jagannath Temple in Ranchi is a beautiful 17th-century temple.",
+    "maa chhinnamasta": "Maa Chhinnamasta Temple in Rajrappa is a famous Shakti Peeth.",
+"sun temple":"The Sun Temple near Ranchi is shaped like a giant chariot with 18 wheels.",
+    // National Parks & Wildlife
+    "betla national park": "Betla National Park is part of Palamau Tiger Reserve, known for elephants and tigers.",
+    "dalma sanctuary": "Dalma Wildlife Sanctuary near Jamshedpur is famous for elephants and trekking.",
+    "hazaribagh national park": "Hazaribagh National Park offers scenic landscapes and wildlife.",
+    "palamau tiger reserve": "Palamau Tiger Reserve is one of India's first 9 tiger reserves.",
+    
+    // Festivals & Culture
+    "sarhul festival": "Sarhul is the most important tribal festival, celebrating nature and sal trees.",
+    "karma festival": "Karma is celebrated in August/September with folk dances and songs.",
+    "sohrai": "Sohrai is a harvest festival known for its unique wall paintings.",
+    "tusu parab": "Tusu Parab is a harvest festival celebrated in January with songs and fairs.",
+    "chhau dance": "Chhau Dance is a famous tribal martial dance form, recognized by UNESCO.",
+    
+    // Food
+    "dhuska": "Dhuska is a deep-fried rice-lentil dish, usually served with ghugni or curry.",
+    "litti chokha": "Litti Chokha is a traditional delicacy enjoyed with chokha made of brinjal or potatoes.",
+    "thekua": "Thekua is a sweet snack made during Chhath Puja, popular in Jharkhand.",
+    "handia": "Handia is a traditional rice beer made by tribal communities.",
+
+    // Transport
+    "ranchi airport": "Ranchi Airport (Birsa Munda Airport) connects Jharkhand with major cities.",
+    "railway stations": "Major railway stations include Ranchi, Dhanbad, Jamshedpur, and Hazaribagh.",
+    "taxi service": "Local taxi and cab services are available in Ranchi, Jamshedpur, and Deoghar.",
+
+    // Safety
+    "emergency contacts": "For emergencies, dial 100 for police, 102 for ambulance, and 101 for fire service.",
+    "sos": "Use the SOS feature on our website for instant help and nearest assistance.",
+
+    // Default
+    "default": "I'm here to help with information about Jharkhand tourism! Ask me about waterfalls, temples, festivals, culture, food, eco-stays, or transport."
+};
+
+           
+           
+             
             // Function to get chatbot response
             function getChatbotResponse(userMessage) {
                 const message = userMessage.toLowerCase();
